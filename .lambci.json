@@ -3,10 +3,14 @@
   "build": "false",
   "branches": {
     "master": "true",
-    "release/cfn": "true",
-    "test/cfn": "true"
+    "release/cfn": "true"
   },
   "env": {
     "AWS_DEFAULT_REGION": "ap-northeast-1"
+  },
+  "pullRequests": {
+    "fromForkPublicRepo": {
+      "inheritSecrets": "true"
+    }
   }
 }

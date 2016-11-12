@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+env
+
 set -x
 
 aws cloudformation validate-template \
@@ -38,7 +40,7 @@ while true; do
   count=$(( $count + 1 ))
 done
 
-if [[ "$LAMBCI_BRANCH" == "release/cfn" ]]; then
+if [[ "$LAMBCI_BRANCH" == "release/cfn" && -z "$LAMBCI_PULL_REQUEST" ]]; then
   aws cloudformation execute-change-set \
     --stack-name "$STACK_NAME" \
     --change-set-name "$change_set_id"
