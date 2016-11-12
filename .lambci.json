@@ -20,5 +20,6 @@
       ]
     },
     "fromForkPrivateRepo": "false"
-  }
+  },
+  "S3PublicSecretNames": "false"
 }
