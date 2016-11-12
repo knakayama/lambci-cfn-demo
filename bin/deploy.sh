@@ -3,8 +3,7 @@
 set -x
 
 aws cloudformation validate-template \
-  --template-body file://cfn.yml \
-  --region "$AWS_REGION"
+  --template-body file://cfn.yml
 
 aws cloudformation wait stack-exists \
   --stack-name "$STACK_NAME"

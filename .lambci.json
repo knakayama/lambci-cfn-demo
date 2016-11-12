@@ -6,7 +6,7 @@
     "release/cfn": "true",
     "test/cfn": "true"
   },
-  "secretEnv": {
-    "STACK_NAME": "lambci-cfn-demo"
+  "env": {
+    "AWS_DEFAULT_REGION": "ap-northeast-1"
   }
 }
