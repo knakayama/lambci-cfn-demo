@@ -1,0 +1,25 @@
+{
+  "cmd": "./bin/install.sh && ./bin/deploy.sh",
+  "build": "false",
+  "branches": {
+    "master": "true",
+    "release/cfn": "true"
+  },
+  "env": {
+    "AWS_DEFAULT_REGION": "ap-northeast-1"
+  },
+  "pullRequests": {
+    "fromSelfPublicRepo": "true",
+    "fromSelfPrivateRepo": "true",
+    "fromForkPublicRepo": {
+      "build": "true",
+      "inheritSecrets": "true",
+      "allowConfigOverrides": [
+        "cmd",
+        "env"
+      ]
+    },
+    "fromForkPrivateRepo": "false"
+  },
+  "s3PublicSecretNames": "false"
+}
