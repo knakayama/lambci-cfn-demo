@@ -9,8 +9,16 @@
     "AWS_DEFAULT_REGION": "ap-northeast-1"
   },
   "pullRequests": {
+    "fromSelfPublicRepo": "true",
+    "fromSelfPrivateRepo": "true",
     "fromForkPublicRepo": {
-      "inheritSecrets": "true"
-    }
+      "build": "true",
+      "inheritSecrets": "true",
+      "allowConfigOverrides": [
+        "cmd",
+        "env"
+      ]
+    },
+    "fromForkPrivateRepo": "false"
   }
 }
