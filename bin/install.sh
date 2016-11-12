@@ -2,3 +2,4 @@
 
 pip install --user awscli --quiet
 aws --version
+env
