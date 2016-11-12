@@ -6,9 +6,11 @@ set -x
 
 aws cloudformation validate-template \
   --template-body file://cfn.yml
+[[ $? == 0 ]] || exit 1
 
 aws cloudformation wait stack-exists \
   --stack-name "$STACK_NAME"
+[[ $? == 0 ]] || exit 1
 
 change_set_id="$(aws cloudformation create-change-set \
   --stack-name "$STACK_NAME" \
